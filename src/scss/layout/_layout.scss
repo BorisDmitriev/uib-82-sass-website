@@ -1,0 +1,100 @@
+nav {
+  display: flex;
+  justify-content: center;
+
+  a {
+    color: $primary-color !important;
+  }
+}
+
+header {
+  height: $huge;
+  background-image: url('../../images/header.jpg');
+
+  h1{
+    padding: 3rem 0rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 3rem;
+  }
+}
+
+.cards{
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+  }
+
+
+  .card {
+
+    .bg-mountain{
+        background-image: url(../../images/mountain.jpg);
+        width: 0;
+        height: 0;
+        
+
+      @media screen and (min-width: $tablet) {
+        width: 20%;
+      }
+        @media screen and (min-width: $desktop) {
+          width: 35%;
+      }
+    } 
+
+
+    width: 70%;
+    border-radius: 5px;
+    background-color: $secondary-color;
+    border: $border-size solid $secondary-color;
+  
+    img {
+      background-size: cover;
+      width: 100%;
+      background-position: center;
+
+      @media screen and (min-width: $tablet) {
+          width: 20%;
+          height: 15rem;
+          object-fit: cover;
+      }
+      @media screen and (min-width: $desktop) {
+        width: 35%;
+    }
+    }
+
+    @media screen and (min-width: $tablet) {
+        width: 80%;
+        flex-direction: row;
+    }
+    @media screen and (min-width: $desktop) {
+        flex-basis: 45%;
+    }
+  }
+
+}
+
+
+main {
+
+  & > *{
+    padding: $main-elements-padding;
+   }
+
+  aside {
+    border:1px solid $secondary-color;
+    width: 70%;
+  }
+
+  article{
+    width: 70%;
+  }
+}
+
+footer {
+  background-color: $primary-color;
+  a {
+    color: white;
+  }
+}
